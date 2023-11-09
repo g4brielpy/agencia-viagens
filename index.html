@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Agência de Viagens | Encortre o hotel certo para você!"
+    />
+    <title>Agência de Viagens</title>
+
+    <link rel="stylesheet" type="text/css" href="style/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&amp;display=swap"
+    />
+    <link
+      rel="shortcut icon"
+      href="assets/image/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
+
+  <body>
+    <header class="cabecalho">
+      <div class="largura_limitada">
+        <img src="assets/image/local-logo.png" alt="Logo Agência de Viagens" />
+        <span class="text-logo">agência de viagens</span>
+      </div>
+    </header>
+
+    <main class="container-principal">
+      <section class="banner">
+        <div class="container-banner largura_limitada">
+          <div class="header-form">
+            <img src="assets/image/aviao.png" alt="Avião" />
+            <p>Solicite um orçamento</p>
+          </div>
+          <div class="main-form">
+            <h2>Informe seus dados</h2>
+            <form
+              class="form-dados"
+              action="https://www.devmedia.com.br/codigos/missao/front-end/agencia-de-viagens/"
+              method="post"
+            >
+              <div class="box-input">
+                <label for="nome_usuario">Nome</label>
+                <input
+                  id="nome_usuario"
+                  type="text"
+                  name="nome"
+                  placeholder="Nome Completo"
+                  required
+                />
+              </div>
+              <div class="box-input">
+                <label for="email_usuario">Email</label>
+                <input
+                  id="email_usuario"
+                  type="email"
+                  name="email"
+                  placeholder="Email para contato"
+                  required
+                />
+              </div>
+              <div class="box-input">
+                <label for="celular_usuario">Celular</label>
+                <input
+                  id="celular_usuario"
+                  type="tel"
+                  name="celular"
+                  placeholder="(xx) x xxxx-xxxx"
+                  required
+                />
+              </div>
+              <div class="container-input">
+                <div class="box-input">
+                  <label for="data_ida">Data da ida</label>
+                  <input id="data_ida" type="date" name="partida" required />
+                </div>
+                <div class="box-input">
+                  <label for="data_volta">Data da volta</label>
+                  <input id="data_volta" type="date" name="chegada" required />
+                </div>
+              </div>
+              <div class="container-input">
+                <div class="box-input">
+                  <label for="origem_viagem">Origem</label>
+                  <input
+                    id="origem_viagem"
+                    type="text"
+                    name="origem"
+                    placeholder="Partindo de"
+                    required
+                  />
+                </div>
+                <div class="box-input">
+                  <label for="destino_viagem">Destino</label>
+                  <input
+                    id="destino_viagem"
+                    type="text"
+                    name="destino"
+                    placeholder="Indo para"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="container-input-check">
+                <label class="label-check">Quarto com cama infantil?</label>
+                <div class="flex-check">
+                  <div class="box-input input-check">
+                    <input
+                      id="cama_infantil_sim"
+                      type="radio"
+                      name="infantil"
+                      value="sim"
+                      required
+                    />
+                    <label for="cama_infantil_sim">Sim</label>
+                  </div>
+
+                  <div class="box-input input-check">
+                    <input
+                      id="cama_infantil_nao"
+                      type="radio"
+                      name="infantil"
+                      value="nao"
+                    />
+                    <label for="cama_infantil_nao">Não</label>
+                  </div>
+                </div>
+              </div>
+              <div class="container-input-check">
+                <label class="label-check">Preferências da hospedagem</label>
+                <div class="flex-check">
+                  <span>
+                    <div class="box-input input-check">
+                      <input
+                        id="piscina"
+                        type="checkbox"
+                        name="preferencias[]"
+                        value="piscina"
+                      />
+                      <label for="piscina">Piscina</label>
+                    </div>
+                    <div class="box-input input-check">
+                      <input
+                        id="wifi"
+                        type="checkbox"
+                        name="preferencias[]"
+                        value="wifi"
+                      />
+                      <label for="wifi">WI-FI</label>
+                    </div>
+                  </span>
+                  <span>
+                    <div class="box-input input-check">
+                      <input
+                        id="garagem"
+                        type="checkbox"
+                        name="preferencias[]"
+                        value="garagem"
+                      />
+                      <label for="garagem">Garagem</label>
+                    </div>
+                    <div class="box-input input-check">
+                      <input
+                        id="suite"
+                        type="checkbox"
+                        name="preferencias[]"
+                        value="suite"
+                      />
+                      <label for="suite">Suite</label>
+                    </div>
+                  </span>
+                </div>
+              </div>
+              <button class="enviar-form" type="submit">
+                Solicitar orçamento
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section id="ofertas" class="largura_limitada">
+        <!-- primeira seção flex de image -->
+        <div class="box-text">
+          <h3>Ofertas</h3>
+          <p>Com até <strong>50%</strong> de desconto.</p>
+        </div>
+        <div class="secao_galeria oferta">
+          <figure class="img-destaque">
+            <img src="assets/image/rio.jpg" alt="Rio de Janeiro" />
+            <figcaption>Rio de Janeiro</figcaption>
+          </figure>
+          <div class="box-img-4">
+            <span class="img-col">
+              <figure>
+                <img src="assets/image/manaus.jpg" alt="Manaus" />
+                <figcaption>Manaus</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/image/saopaulo.jpg" alt="São Paulo" />
+                <figcaption>São Paulo</figcaption>
+              </figure>
+            </span>
+            <span class="img-col">
+              <figure>
+                <img
+                  src="assets/image/niteroi.jpg"
+                  alt="Rio de Janeiro - Ponte de Niterói"
+                />
+                <figcaption>Rio de Janeiro</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/image/maranhao.jpg" alt="Maranhão" />
+                <figcaption>Maranhão</figcaption>
+              </figure>
+            </span>
+          </div>
+        </div>
+        <!-- segunda seção flex de image -->
+        <div class="box-text">
+          <h3>Explore a Natureza</h3>
+          <p>Viaje conosco e veja o melhor que a natureza tem a oferecer.</p>
+        </div>
+        <div class="container_oferta">
+          <div class="card-anuncio">
+            <figure>
+              <img src="assets/image/lencol.jpg" alt="Lençois Maranhenses" />
+              <div class="discricao-oferta">
+                <figcaption>Lençois Maranhenses, Brasil</figcaption>
+                <small>Ida e volta a partir de R$79</small>
+              </div>
+            </figure>
+          </div>
+          <div class="card-anuncio">
+            <figure>
+              <img src="assets/image/goias.jpg" alt="Cachoeira Santa Bárbara" />
+              <div class="discricao-oferta">
+                <figcaption>Cachoeira Santa Bárbara, Brasil</figcaption>
+                <small>Ida e volta por R$139</small>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="rodape">
+      <div class="container-redes largura_limitada">
+        <div class="contatos">
+          <h4>Contatos</h4>
+          <div class="box-contato">
+            <img src="assets/image/local.png" alt="Local" />
+            <span>Rio de Janeiro - RJ</span>
+          </div>
+          <div class="box-contato">
+            <img src="assets/image/telefone.png" alt="Telefone" />
+            <span>Telefone: (31) 9 9999-9999</span>
+          </div>
+          <div class="box-contato">
+            <img src="assets/image/email.png" alt="Email" />
+            <span>Email: contato@agencia.com.br</span>
+          </div>
+        </div>
+        <div class="contatos">
+          <h4>Nossas Redes Sociais</h4>
+          <div class="box-contato">
+            <img src="assets/image/fb.png" alt="Facebook" />
+            <a href="#" target="_blank" rel="external">/AgenciaDeViagem</a>
+          </div>
+          <div class="box-contato">
+            <img src="assets/image/ig.png" alt="instagram" />
+            <a href="#" target="_blank" rel="external">@AgenciaDeViagem</a>
+          </div>
+          <div class="box-contato">
+            <img src="assets/image/tt.png" alt="Twitter" />
+            <a href="#" target="_blank" rel="external">@AgenciaDeViagem</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

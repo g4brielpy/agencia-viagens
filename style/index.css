@@ -1,0 +1,401 @@
+@charset "UTF-8";
+
+/* Reset style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", Helvetica, sans-serif;
+}
+
+/* variavesi */
+:root {
+  --cor_fundo: #80808029;
+  --cor-destaque: #5d15d1;
+}
+
+/* largura e espaçamento global */
+.largura_limitada {
+  width: 100%;
+  max-width: 1024px;
+
+  margin: auto;
+  padding: 0 1em;
+}
+
+/* seção cabeçalho */
+header.cabecalho {
+  width: 100%;
+  min-height: 3.5em;
+
+  display: flex;
+  align-items: center;
+}
+.cabecalho div.largura_limitada {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.cabecalho img[alt="Logo Agência de Viagens"] {
+  width: 34px;
+  height: 34px;
+}
+.cabecalho span.text-logo {
+  color: var(--cor-destaque);
+  font-size: 1.6em;
+  font-variant: small-caps;
+  font-weight: 600;
+}
+
+/* seção banner */
+section.banner {
+  width: 100%;
+  height: 100%;
+  padding: 3.125em 0em;
+
+  background: url("../assets/image/bahia.jpg") no-repeat top center;
+  background-size: cover;
+}
+
+/* seção formulário */
+div.header-form {
+  background-color: var(--cor-destaque);
+  color: #fff;
+
+  font-weight: 600;
+  font-size: 0.875em;
+
+  width: 100%;
+  min-height: 2.19em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+.header-form img[alt="Avião"] {
+  width: 1.25em;
+  height: 1.25em;
+  transform: rotate(-45deg);
+}
+
+div.main-form {
+  background-color: #fff;
+
+  width: 100%;
+  padding: 1.875em 1.5625em 1.25em;
+}
+.main-form h2:first-child {
+  font-size: 1.375em;
+  margin-bottom: 1.5em;
+}
+
+/* formulário */
+form.form-dados {
+  display: flex;
+  flex-flow: column;
+  row-gap: 1.2em;
+}
+.box-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+}
+.box-input label,
+.label-check {
+  font-size: 1em;
+}
+.box-input input {
+  padding: 1em;
+}
+
+/* data ida e volta | origem e destino */
+div.container-input {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1.2em;
+}
+.container-input div.box-input {
+  flex: 1 1 200px;
+}
+
+/* container input check | infantil e preferencias */
+div.container-input-check {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+}
+.flex-check {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1em 3em;
+}
+.flex-check span {
+  display: flex;
+  gap: 1em 3em;
+  flex-wrap: wrap;
+}
+.flex-check div.box-input {
+  flex-direction: row;
+  align-items: center;
+  min-width: 100px;
+}
+.flex-check .box-input input {
+  cursor: pointer;
+}
+
+/* botão formulário */
+button.enviar-form {
+  max-width: 10em;
+  min-height: 2em;
+  margin-top: 1em;
+
+  background-color: var(--cor-destaque);
+  color: #fff;
+  font-size: 1em;
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.enviar-form:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+.enviar-form:active {
+  transform: translateY(0.1em);
+}
+
+/* conteúdo da página */
+main.container-principal {
+  background-color: var(--cor_fundo);
+}
+
+/* Estilizando a área de ofertas */
+section#ofertas {
+  padding: 3em 1em;
+}
+
+div.box-text {
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625em;
+}
+
+div.secao_galeria {
+  width: 100%;
+  min-height: 20.3125em;
+  margin-bottom: 3em;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1em;
+}
+.secao_galeria figure {
+  display: flex;
+}
+.secao_galeria img {
+  object-fit: cover;
+}
+
+/* 1 img flex destaque */
+figure.img-destaque {
+  width: calc(50% - 0.5em);
+  height: 20.3125em;
+  color: #00000026;
+}
+figure.img-destaque img {
+  width: 100%;
+  height: 100%;
+}
+
+/* 4 img flex box */
+div.box-img-4 {
+  width: calc(50% - 0.5em);
+  height: 20.3125em;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+.box-img-4 span.img-col {
+  width: calc(100% / 2);
+  height: 20.3125em;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.5em;
+}
+.box-img-4 figure {
+  height: 100%;
+  width: 100%;
+
+  flex: 1 1 auto;
+  display: flex;
+}
+.box-img-4 img {
+  width: 100%;
+  height: calc((20.3125em / 2) - 0.25em);
+}
+
+/* sobrepondo a legenda */
+.oferta figure {
+  position: relative;
+}
+.oferta figcaption {
+  background-color: #0000007a;
+  color: #fff;
+
+  width: 100%;
+  padding: 0.2em 1em;
+
+  position: absolute;
+  bottom: 0px;
+}
+
+/* cards da seção de oferta */
+div.container_oferta {
+  width: 100%;
+  height: 100%;
+  min-height: 23.4375em;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1em;
+}
+
+div.card-anuncio {
+  flex: 1 1 300px;
+
+  display: flex;
+  justify-content: center;
+}
+.card-anuncio figure {
+  flex: 1 1 450px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+}
+.card-anuncio img {
+  flex: 1 1 auto;
+
+  width: 100%;
+  height: 20.3125em;
+}
+
+/* texto card */
+div.discricao-oferta {
+  background-color: #fff;
+
+  padding: 0.8em;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.discricao-oferta figcaption {
+  font-size: 0.9em;
+  font-weight: 600;
+}
+.discricao-oferta small {
+  font-size: 0.8em;
+}
+
+/* seção rodape */
+footer.rodape {
+  background-color: var(--cor-destaque);
+  padding: 1.5em 0;
+}
+div.container-redes {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3em 2em;
+}
+div.contatos {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1em;
+}
+div.box-contato {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.6em;
+}
+
+footer .container-redes h4 {
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-bottom: 0.6em;
+}
+footer .container-redes :is(span, a) {
+  color: #fff;
+  font-size: 0.9em;
+  text-decoration: none;
+}
+footer .container-redes img {
+  width: 1.2em;
+}
+
+/* MEDIAS QUERIES */
+@media only screen and (max-width: 768px) {
+  /* TABLET */
+
+  /* botão submit do formulário */
+  button.enviar-form {
+    max-width: 100%;
+    padding: 0.5em;
+    font-size: 1.1em;
+  }
+
+  /* Estilizando a área de ofertas */
+  div.secao_galeria {
+    width: 100%;
+
+    flex-flow: column wrap;
+    gap: 0.5em;
+  }
+
+  /* 1 img flex destaque */
+  figure.img-destaque {
+    width: 100%;
+    height: auto;
+  }
+  figure.img-destaque img {
+    height: calc((20.3125em / 2) - 0.25em);
+  }
+
+  /* 4 img flex box */
+  div.box-img-4 {
+    width: 100%;
+    height: 100%;
+
+    flex-direction: column;
+  }
+  div.box-img-4 span.img-col {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  /* MOBILE */
+
+  div.container-redes {
+    width: fit-content;
+
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
